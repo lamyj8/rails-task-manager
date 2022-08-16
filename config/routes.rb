@@ -4,6 +4,10 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "articles#index"
 
+  # CREATE
+  get "tasks/new", to: "tasks#new", as: :new_task
+  post "tasks", to: "tasks#create"
+
  # READ ALL
  get "tasks", to: "tasks#index"
 
